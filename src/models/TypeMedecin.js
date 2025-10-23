@@ -13,6 +13,6 @@ TypeMedecin.init({
         type: DataTypes.STRING,
         allowNull: false
     }
-}, { sequelize, tableName: "type_medecins", modelName: "TypeMedecin", timestamps: false })
+}, { sequelize, tableName: "types_medecin", modelName: "TypeMedecin", timestamps: false })
 
 export default TypeMedecin;

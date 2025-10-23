@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import { getTypeMedecins, postTypeMedecin } from '../../controllers/v1/typeMedecin.controller.js';
+import { Router } from "express";
+import { getTypeMedecins, postTypeMedecin } from "../../controllers/v1/typeMedecin.controller.js";
 
 const router = Router();
 

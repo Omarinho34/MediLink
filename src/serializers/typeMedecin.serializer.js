@@ -1,5 +1,5 @@
 export function serializeTypeMedecin(typeMedecin){
-    return{
+    return {
         id: typeMedecin.id,
         libelle: typeMedecin.libelle
     }

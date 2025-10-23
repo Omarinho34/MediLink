@@ -11,7 +11,7 @@ export async function getMedecins(req, res, next) {
 }
 
 /* POST /medecins */
-export async function postMedecin(req, res, next) {
+export async function postMedecin(req, res, next){
     const medecin = await svc.create(req.body);
     return res.status(201).json({ data: serializeMedecin(medecin) });
 }

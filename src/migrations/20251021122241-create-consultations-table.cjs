@@ -22,7 +22,7 @@ module.exports = {
         allowNull: false
       },
       duree:{
-        type: Sequelize.TIME,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       motif: {

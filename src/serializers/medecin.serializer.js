@@ -1,4 +1,3 @@
-// Ressources
 export function serializeMedecin(medecin){
     return {
         id: medecin.id,
@@ -11,6 +10,6 @@ export function serializeMedecin(medecin){
     }
 }
 
-export function serializeList(medecins){
-    return medecins.map(serializeMedecin);
+export function serializeList(medecin){
+    return medecin.map(serializeMedecin);
 }

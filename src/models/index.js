@@ -36,34 +36,6 @@ export async function initDB(){
 // const config = require(__dirname + '/../config/config.json')[env];
 // const db = {};
 
-// // Import des modèles
-// const Patient = require('./Patient')(sequelize, Sequelize.DataTypes);
-// const Medecin = require('./Medecin')(sequelize, Sequelize.DataTypes);
-// const TypeMedecin = require('./TypeMedecin')(sequelize, Sequelize.DataTypes);
-// const Consultation = require('./Consultation')(sequelize, Sequelize.DataTypes);
-// const Prescription = require('./Prescription')(sequelize, Sequelize.DataTypes);
-// const Medicament = require('./Medicament')(sequelize, Sequelize.DataTypes);
-
-// // Consultation > Patient
-// Consultation.belongsTo(Patient, { foreignKey: 'id_patient' });
-// Patient.hasMany(Consultation, { foreignKey: 'id_patient' });
-
-// // Consultation > Medecin
-// Consultation.belongsTo(Medecin, { foreignKey: 'id_medecin' });
-// Medecin.hasMany(Consultation, { foreignKey: 'id_medecin' });
-
-// // Medecin > TypeMedecin
-// Medecin.belongsTo(TypeMedecin, { foreignKey: 'id_type' });
-// TypeMedecin.hasMany(Medecin, { foreignKey: 'id_type' });
-
-// // Prescription > Consultation
-// Prescription.belongsTo(Consultation, { foreignKey: 'id_consultation' });
-// Consultation.hasMany(Prescription, { foreignKey: 'id_consultation' });
-
-// // Prescription > Medicament
-// Prescription.belongsTo(Medicament, { foreignKey: 'id_medicament' });
-// Medicament.hasMany(Prescription, { foreignKey: 'id_medicament' });
-
 // let sequelize;
 // if (config.use_env_variable) {
 //   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -95,12 +67,4 @@ export async function initDB(){
 // db.sequelize = sequelize;
 // db.Sequelize = Sequelize;
 
-// module.exports = {
-//   db,
-//   Patient,
-//   Medecin,
-//   TypeMedecin,
-//   Consultation,
-//   Prescription,
-//   Medicament
-// };
+// module.exports = db;

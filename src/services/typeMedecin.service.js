@@ -1,4 +1,4 @@
-import TypeMedecin from '../models/typeMedecin.js';
+import TypeMedecin from "../models/TypeMedecin.js";
 
 export async function findAll(){
     return TypeMedecin.findAll();
@@ -11,4 +11,3 @@ export async function findById(id){
 export async function create(data){
     return TypeMedecin.create(data);
 }
-
