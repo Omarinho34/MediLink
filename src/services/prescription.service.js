@@ -12,14 +12,14 @@ export async function create(data){
     return Prescription.create(data);
 }
 
-export async function update(id, data){
-    const prescription = await Prescription.findByPk(id);
+export async function update(id_consultation, id_medicament, data){
+    const prescription = await Prescription.findOne({ where: { id_consultation, id_medicament } });
     if(!prescription) throw new Error('Prescription not found');
     return prescription.update(data);
 }
 
-export async function remove(id){
-    const prescription = await Prescription.findByPk(id);
+export async function remove(id_consultation, id_medicament){
+    const prescription = await Prescription.findOne({ where: { id_consultation, id_medicament } });
     if(!prescription) throw new Error('Prescription not found');
     return prescription.destroy();
 }

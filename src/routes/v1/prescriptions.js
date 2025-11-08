@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', getPrescriptions);
 router.post('/', postPrescription);
-router.put('/:id', putPrescription);
-router.delete('/:id', deletePrescription);
+router.put('/:idconsultation/:idmedicament', putPrescription);
+router.delete('/:idconsultation/:idmedicament', deletePrescription);
 
 export default router;
