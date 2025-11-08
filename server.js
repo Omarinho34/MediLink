@@ -9,6 +9,8 @@ import v1medicamentsRoutes from './src/routes/v1/medicaments.js';
 import v1consultationsRoutes from './src/routes/v1/consultations.js';
 import v1prescriptionsRoutes from './src/routes/v1/prescriptions.js';
 
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
 
 console.log("Server is starting...");
 
