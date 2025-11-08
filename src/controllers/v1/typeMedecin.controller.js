@@ -15,3 +15,15 @@ export async function postTypeMedecin(req, res, next){
     const typeMedecin = await svc.create(req.body);
     return res.status(201).json({ data: serializeTypeMedecin(typeMedecin) });
 }
+
+/* PUT /typeMedecins/:id */
+export async function putTypeMedecin(req, res, next){
+    const typeMedecin = await svc.update(req.params.id, req.body);
+    return res.json({ data: serializeTypeMedecin(typeMedecin) });
+}
+
+/* DELETE /typeMedecins/:id */
+export async function deleteTypeMedecin(req, res, next){
+    await svc.remove(req.params.id);
+    return res.status(204).end();
+}

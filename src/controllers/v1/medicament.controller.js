@@ -14,3 +14,13 @@ export async function postMedicament(req, res, next){
     const medicament =  await svc.create(req.body);
     return res.status(201).json({ data: serializeMedicament(medicament) });
 }
+
+export async function putMedicament(req, res, next){
+    const medicament = await svc.update(req.params.id, req.body);
+    return res.json({ data: serializeMedicament(medicament) });
+}
+
+export async function deleteMedicament(req, res, next){
+    await svc.remove(req.params.id);
+    return res.status(204).end();
+}

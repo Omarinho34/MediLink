@@ -21,3 +21,23 @@ export async function postConsultation(req, res, next){
         next(errorHandler(error, req, res, next));
     }
 }
+
+export async function putConsultation(req, res, next){
+    try{
+        const consultation = await svc.update(req.params.id, req.body);
+        return res.json({ data: serializeConsultation(consultation) });
+    }
+    catch (error){
+        next(errorHandler(error, req, res, next));
+    }
+}
+
+export async function deleteConsultation(req, res, next){
+    try{
+        await svc.remove(req.params.id);
+        return res.status(204).end();
+    }
+    catch (error){
+        next(errorHandler(error, req, res, next));
+    }
+}

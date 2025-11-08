@@ -16,3 +16,15 @@ export async function postPrescription(req, res, next){
     const prescription = await EventCounts.create(req.body);
     return res.status(201).json({ data: serializePrescription(prescription) });
 }
+
+/* PUT /prescriptions/:id */
+export async function putPrescription(req, res, next){
+    const prescription = await svc.update(req.params.id, req.body);
+    return res.json({ data: serializePrescription(prescription) });
+}
+
+/* DELETE /prescriptions/:id */
+export async function deletePrescription(req, res, next){
+    await svc.remove(req.params.id);
+    return res.status(204).end();
+}

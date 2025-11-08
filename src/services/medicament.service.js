@@ -11,3 +11,15 @@ export async function findById(id){
 export function create(data){
     return Medicament.create(data);
 }
+
+export async function update(id, data){
+    const medicament = await Medicament.findByPk(id);
+    if(!medicament) throw new Error('Medicament not found');
+    return medicament.update(data);
+}
+
+export async function remove(id){
+    const medicament = await Medicament.findByPk(id);
+    if(!medicament) throw new Error('Medicament not found');
+    return medicament.destroy();
+}
